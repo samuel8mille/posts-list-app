@@ -1,4 +1,4 @@
-package samuel.com.br.testedaggerapp
+package samuel.com.br.postlistapp
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
