@@ -1,4 +1,4 @@
-package samuel.com.br.testedaggerapp.model
+package samuel.com.br.postlistapp.model
 
 import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey

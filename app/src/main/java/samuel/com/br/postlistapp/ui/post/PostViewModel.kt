@@ -1,8 +1,8 @@
-package samuel.com.br.testedaggerapp.ui.post
+package samuel.com.br.postlistapp.ui.post
 
 import android.arch.lifecycle.MutableLiveData
-import samuel.com.br.testedaggerapp.base.BaseViewModel
-import samuel.com.br.testedaggerapp.model.Post
+import samuel.com.br.postlistapp.base.BaseViewModel
+import samuel.com.br.postlistapp.model.Post
 
 class PostViewModel: BaseViewModel() {
 

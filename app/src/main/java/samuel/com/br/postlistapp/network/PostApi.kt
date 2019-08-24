@@ -1,8 +1,8 @@
-package samuel.com.br.testedaggerapp.network
+package samuel.com.br.postlistapp.network
 
 import io.reactivex.Observable
 import retrofit2.http.GET
-import samuel.com.br.testedaggerapp.model.Post
+import samuel.com.br.postlistapp.model.Post
 
 interface PostApi {
 

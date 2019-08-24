@@ -1,11 +1,11 @@
-package samuel.com.br.testedaggerapp.injection
+package samuel.com.br.postlistapp.injection
 
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
 import android.arch.persistence.room.Room
 import android.support.v7.app.AppCompatActivity
-import samuel.com.br.testedaggerapp.model.database.AppDatabase
-import samuel.com.br.testedaggerapp.ui.post.PostListViewModel
+import samuel.com.br.postlistapp.model.database.AppDatabase
+import samuel.com.br.postlistapp.ui.post.PostListViewModel
 
 class ViewModelFactory(private val activity: AppCompatActivity): ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {

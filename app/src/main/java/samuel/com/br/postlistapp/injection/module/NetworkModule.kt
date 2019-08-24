@@ -1,4 +1,4 @@
-package samuel.com.br.testedaggerapp.injection.module
+package samuel.com.br.postlistapp.injection.module
 
 import dagger.Module
 import dagger.Provides
@@ -7,8 +7,8 @@ import io.reactivex.schedulers.Schedulers
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
-import samuel.com.br.testedaggerapp.network.PostApi
-import samuel.com.br.testedaggerapp.utils.BASE_URL
+import samuel.com.br.postlistapp.network.PostApi
+import samuel.com.br.postlistapp.utils.BASE_URL
 
 @Module
 @Suppress("unsed")

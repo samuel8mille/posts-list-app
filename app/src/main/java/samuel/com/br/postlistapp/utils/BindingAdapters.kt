@@ -1,4 +1,4 @@
-package samuel.com.br.testedaggerapp.utils
+package samuel.com.br.postlistapp.utils
 
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.Observer
@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.widget.TextView
-import samuel.com.br.testedaggerapp.utils.extension.getParentActivity
+import samuel.com.br.postlistapp.utils.extension.getParentActivity
 
 @BindingAdapter("mutableVisibility")
 fun setMutableVisibility(view: View, visibility: MutableLiveData<Int>?) {

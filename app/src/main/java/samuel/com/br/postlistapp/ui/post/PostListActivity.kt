@@ -1,4 +1,4 @@
-package samuel.com.br.testedaggerapp.ui.post
+package samuel.com.br.postlistapp.ui.post
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
@@ -9,7 +9,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import samuel.com.br.testedaggerapp.R
 import samuel.com.br.testedaggerapp.databinding.ActivityPostListBinding
-import samuel.com.br.testedaggerapp.injection.ViewModelFactory
+import samuel.com.br.postlistapp.injection.ViewModelFactory
 
 class PostListActivity : AppCompatActivity() {
 
@@ -24,7 +24,9 @@ class PostListActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_post_list)
         binding.postList.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
-        viewModel = ViewModelProviders.of(this, ViewModelFactory(this)).get(PostListViewModel::class.java)
+        viewModel = ViewModelProviders.of(this,
+            ViewModelFactory(this)
+        ).get(PostListViewModel::class.java)
         viewModel.errorMessage.observe(this, Observer {
             errorMessage -> if (errorMessage != null) showError(errorMessage) else hideError()
         })

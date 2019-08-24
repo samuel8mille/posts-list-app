@@ -1,9 +1,9 @@
-package samuel.com.br.testedaggerapp.ui.post
+package samuel.com.br.postlistapp.ui.post
 
 import android.arch.persistence.room.Dao
 import android.arch.persistence.room.Insert
 import android.arch.persistence.room.Query
-import samuel.com.br.testedaggerapp.model.Post
+import samuel.com.br.postlistapp.model.Post
 
 @Dao
 interface PostDao {

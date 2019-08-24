@@ -1,4 +1,4 @@
-package samuel.com.br.testedaggerapp.ui.post
+package samuel.com.br.postlistapp.ui.post
 
 import android.databinding.DataBindingUtil
 import android.support.v7.widget.RecyclerView
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import samuel.com.br.testedaggerapp.R
 import samuel.com.br.testedaggerapp.databinding.ItemPostBinding
-import samuel.com.br.testedaggerapp.model.Post
+import samuel.com.br.postlistapp.model.Post
 
 class PostListAdapter : RecyclerView.Adapter<PostListAdapter.ViewHolder>() {
 

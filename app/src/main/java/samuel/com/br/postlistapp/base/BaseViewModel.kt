@@ -1,10 +1,10 @@
-package samuel.com.br.testedaggerapp.base
+package samuel.com.br.postlistapp.base
 
 import android.arch.lifecycle.ViewModel
-import samuel.com.br.testedaggerapp.injection.component.DaggerViewModelInjector
-import samuel.com.br.testedaggerapp.injection.component.ViewModelInjector
-import samuel.com.br.testedaggerapp.injection.module.NetworkModule
-import samuel.com.br.testedaggerapp.ui.post.PostListViewModel
+import samuel.com.br.postlistapp.injection.component.DaggerViewModelInjector
+import samuel.com.br.postlistapp.injection.component.ViewModelInjector
+import samuel.com.br.postlistapp.injection.module.NetworkModule
+import samuel.com.br.postlistapp.ui.post.PostListViewModel
 
 abstract class BaseViewModel : ViewModel() {
 

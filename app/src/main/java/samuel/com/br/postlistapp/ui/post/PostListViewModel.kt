@@ -1,4 +1,4 @@
-package samuel.com.br.testedaggerapp.ui.post
+package samuel.com.br.postlistapp.ui.post
 
 import android.arch.lifecycle.MutableLiveData
 import android.view.View
@@ -7,9 +7,9 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import samuel.com.br.testedaggerapp.R
-import samuel.com.br.testedaggerapp.base.BaseViewModel
-import samuel.com.br.testedaggerapp.model.Post
-import samuel.com.br.testedaggerapp.network.PostApi
+import samuel.com.br.postlistapp.base.BaseViewModel
+import samuel.com.br.postlistapp.model.Post
+import samuel.com.br.postlistapp.network.PostApi
 import javax.inject.Inject
 
 class PostListViewModel(private val postDao: PostDao) : BaseViewModel() {
@@ -22,7 +22,8 @@ class PostListViewModel(private val postDao: PostDao) : BaseViewModel() {
     val loadingVisibility: MutableLiveData<Int> = MutableLiveData()
     val errorMessage: MutableLiveData<Int> = MutableLiveData()
     val errorClickListener = View.OnClickListener { loadPosts() }
-    val postListAdapter: PostListAdapter = PostListAdapter()
+    val postListAdapter: PostListAdapter =
+        PostListAdapter()
 
     init {
         loadPosts()
