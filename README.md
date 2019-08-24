@@ -1,1 +1,1 @@
-# postsListApp
+# PostsListApp
