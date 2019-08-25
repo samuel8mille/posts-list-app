@@ -25,8 +25,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
-    dynamicFeatures = [":buildSrc"]
+    dynamicFeatures = [Modules.posts]
 }
 
 dependencies {
@@ -51,7 +50,7 @@ dependencies {
 
     // Room
     implementation Libraries.room
-    kapt 'androidx.room:room-compiler:2.0.0'
+    kapt 'androidx.room:room-compiler:2.1.0'
 
     implementation project(Modules.presentation)
 

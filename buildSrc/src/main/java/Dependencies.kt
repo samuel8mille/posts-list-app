@@ -69,7 +69,7 @@ object Versions {
     val mockitoKotlin = "2.1.0"
     val mockitoInline = "3.0.0"
     val constraintLayout = "1.1.3"
-    val room = "2.0.0"
+    val room = "2.1.0"
 }
 
 object Libraries {
