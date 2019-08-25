@@ -1,6 +1,6 @@
-package com.samuel.navigation
+package com.samuel.posts
 
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
 import org.junit.Test
 
 /**
