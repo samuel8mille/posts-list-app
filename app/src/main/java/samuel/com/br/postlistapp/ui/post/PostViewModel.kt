@@ -1,6 +1,6 @@
 package samuel.com.br.postlistapp.ui.post
 
-import android.arch.lifecycle.MutableLiveData
+import androidx.lifecycle.MutableLiveData
 import samuel.com.br.postlistapp.base.BaseViewModel
 import samuel.com.br.postlistapp.model.Post
 

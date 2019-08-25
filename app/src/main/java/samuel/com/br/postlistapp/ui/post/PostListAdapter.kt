@@ -1,14 +1,14 @@
 package samuel.com.br.postlistapp.ui.post
 
-import android.databinding.DataBindingUtil
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import samuel.com.br.postlistapp.model.Post
 import samuel.com.br.testedaggerapp.R
 import samuel.com.br.testedaggerapp.databinding.ItemPostBinding
-import samuel.com.br.postlistapp.model.Post
 
-class PostListAdapter : RecyclerView.Adapter<PostListAdapter.ViewHolder>() {
+class PostListAdapter :
+    androidx.recyclerview.widget.RecyclerView.Adapter<PostListAdapter.ViewHolder>() {
 
     private lateinit var postList: List<Post>
 
@@ -31,7 +31,8 @@ class PostListAdapter : RecyclerView.Adapter<PostListAdapter.ViewHolder>() {
         notifyDataSetChanged()
     }
 
-    class ViewHolder(private val binding: ItemPostBinding) : RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder(private val binding: ItemPostBinding) :
+        androidx.recyclerview.widget.RecyclerView.ViewHolder(binding.root) {
         private val viewModel = PostViewModel()
 
         fun bind(post: Post) {

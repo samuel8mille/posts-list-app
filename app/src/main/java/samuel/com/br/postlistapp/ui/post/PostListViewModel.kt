@@ -1,15 +1,15 @@
 package samuel.com.br.postlistapp.ui.post
 
-import android.arch.lifecycle.MutableLiveData
 import android.view.View
+import androidx.lifecycle.MutableLiveData
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
-import samuel.com.br.testedaggerapp.R
 import samuel.com.br.postlistapp.base.BaseViewModel
 import samuel.com.br.postlistapp.model.Post
 import samuel.com.br.postlistapp.network.PostApi
+import samuel.com.br.testedaggerapp.R
 import javax.inject.Inject
 
 class PostListViewModel(private val postDao: PostDao) : BaseViewModel() {

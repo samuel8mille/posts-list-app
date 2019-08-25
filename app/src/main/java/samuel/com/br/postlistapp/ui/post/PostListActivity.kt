@@ -1,34 +1,39 @@
 package samuel.com.br.postlistapp.ui.post
 
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
-import android.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.snackbar.Snackbar
+import samuel.com.br.postlistapp.injection.ViewModelFactory
 import samuel.com.br.testedaggerapp.R
 import samuel.com.br.testedaggerapp.databinding.ActivityPostListBinding
-import samuel.com.br.postlistapp.injection.ViewModelFactory
 
 class PostListActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityPostListBinding
     private lateinit var viewModel: PostListViewModel
 
-    private var erroSnackBar: Snackbar?= null
+    private var erroSnackBar: Snackbar? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_post_list)
-        binding.postList.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        binding.postList.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(
+            this,
+            androidx.recyclerview.widget.LinearLayoutManager.VERTICAL,
+            false
+        )
 
-        viewModel = ViewModelProviders.of(this,
+        viewModel = ViewModelProviders.of(
+            this,
             ViewModelFactory(this)
         ).get(PostListViewModel::class.java)
-        viewModel.errorMessage.observe(this, Observer {
-            errorMessage -> if (errorMessage != null) showError(errorMessage) else hideError()
+        viewModel.errorMessage.observe(this, Observer { errorMessage ->
+            if (errorMessage != null) showError(errorMessage) else hideError()
         })
         binding.viewModel = viewModel
     }

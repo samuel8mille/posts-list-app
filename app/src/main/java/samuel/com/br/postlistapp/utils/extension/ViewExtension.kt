@@ -1,8 +1,8 @@
 package samuel.com.br.postlistapp.utils.extension
 
 import android.content.ContextWrapper
-import android.support.v7.app.AppCompatActivity
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 
 fun View.getParentActivity(): AppCompatActivity? {
     var context = this.context

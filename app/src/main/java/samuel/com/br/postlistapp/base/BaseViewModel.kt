@@ -1,6 +1,6 @@
 package samuel.com.br.postlistapp.base
 
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.ViewModel
 import samuel.com.br.postlistapp.injection.component.DaggerViewModelInjector
 import samuel.com.br.postlistapp.injection.component.ViewModelInjector
 import samuel.com.br.postlistapp.injection.module.NetworkModule
