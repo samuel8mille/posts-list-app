@@ -3,7 +3,7 @@ package com.samuel.navigation.features
 import android.content.Intent
 import com.samuel.navigation.loadIntentOrNull
 
-object SampleNavigation : DynamicFeature<Intent> {
+object PostsNavigation : DynamicFeature<Intent> {
 
     const val USER_ID_KEY = "USER_ID_KEY"
     const val POST_ID_KEY = "POST_ID_KEY"
