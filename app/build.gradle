@@ -12,7 +12,7 @@ android {
         enabled = true
     }
     defaultConfig {
-        applicationId "samuel.com.br.testedaggerapp"
+        applicationId "samuel.com.br.postlistapp"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
@@ -54,6 +54,8 @@ dependencies {
     kapt 'androidx.room:room-compiler:2.0.0'
 
     implementation project(Modules.presentation)
+
+    implementation project(Modules.navigation)
 
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"

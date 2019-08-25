@@ -3,9 +3,9 @@ package samuel.com.br.postlistapp.ui.post
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import samuel.com.br.postlistapp.R
+import samuel.com.br.postlistapp.databinding.ItemPostBinding
 import samuel.com.br.postlistapp.model.Post
-import samuel.com.br.testedaggerapp.R
-import samuel.com.br.testedaggerapp.databinding.ItemPostBinding
 
 class PostListAdapter :
     androidx.recyclerview.widget.RecyclerView.Adapter<PostListAdapter.ViewHolder>() {

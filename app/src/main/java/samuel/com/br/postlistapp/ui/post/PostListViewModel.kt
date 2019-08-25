@@ -6,10 +6,10 @@ import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
+import samuel.com.br.postlistapp.R
 import samuel.com.br.postlistapp.base.BaseViewModel
 import samuel.com.br.postlistapp.model.Post
 import samuel.com.br.postlistapp.network.PostApi
-import samuel.com.br.testedaggerapp.R
 import javax.inject.Inject
 
 class PostListViewModel(private val postDao: PostDao) : BaseViewModel() {
@@ -49,7 +49,6 @@ class PostListViewModel(private val postDao: PostDao) : BaseViewModel() {
                 { excpection -> onRetrievePostListError(excpection) }
             )
     }
-
 
     private fun onRetrievePostListStart() {
         loadingVisibility.value = View.VISIBLE

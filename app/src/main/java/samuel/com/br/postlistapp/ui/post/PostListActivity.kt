@@ -5,11 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
+import samuel.com.br.postlistapp.R
+import samuel.com.br.postlistapp.databinding.ActivityPostListBinding
 import samuel.com.br.postlistapp.injection.ViewModelFactory
-import samuel.com.br.testedaggerapp.R
-import samuel.com.br.testedaggerapp.databinding.ActivityPostListBinding
 
 class PostListActivity : AppCompatActivity() {
 

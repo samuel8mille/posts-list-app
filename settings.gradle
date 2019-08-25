@@ -1,1 +1,1 @@
-include Modules.app, Modules.presentation, Modules.buildSrc
+include Modules.app, Modules.presentation, Modules.buildSrc, Modules.navigation
