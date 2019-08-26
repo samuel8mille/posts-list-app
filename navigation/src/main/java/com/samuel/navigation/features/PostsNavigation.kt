@@ -9,9 +9,9 @@ object PostsNavigation : DynamicFeature<Intent> {
     const val POST_ID_KEY = "POST_ID_KEY"
 
     private const val POST_LIST =
-        "com.sanogueralorenzo.sample.presentation.postlist.PostListActivity"
+        "com.samuel.posts.presentation.postlist.PostListActivity"
     private const val POST_DETAILS =
-        "com.sanogueralorenzo.sample.presentation.postdetails.PostDetailsActivity"
+        "com.samuel.posts.presentation.postdetails.PostDetailsActivity"
 
     override val dynamicStart: Intent?
         get() = POST_LIST.loadIntentOrNull()

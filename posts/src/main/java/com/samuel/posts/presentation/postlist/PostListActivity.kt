@@ -10,6 +10,7 @@ import br.com.samuel.presentation.stopRefreshing
 import com.google.android.material.snackbar.Snackbar
 import com.samuel.navigation.features.PostsNavigation
 import com.samuel.posts.R
+import com.samuel.posts.injectFeature
 import com.samuel.posts.presentation.model.PostItem
 import kotlinx.android.synthetic.main.activity_post_list.*
 import org.koin.androidx.viewmodel.ext.viewModel
@@ -29,7 +30,7 @@ class PostListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_post_list)
 
-//        injectFeature()
+        injectFeature()
 
         if (savedInstanceState == null) {
             vm.get(refresh = true)
