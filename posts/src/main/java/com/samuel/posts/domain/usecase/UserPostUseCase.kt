@@ -7,11 +7,6 @@ import com.samuel.posts.domain.repository.UserRepository
 import io.reactivex.Single
 import io.reactivex.functions.BiFunction
 
-/**
- * The standard library provides Pair and Triple.
- * In most cases, though, named data classes are a better design choice.
- * This is because they make the code more readable by providing meaningful names for properties.
- */
 data class CombinedUserPost(val user: User, val post: Post)
 
 class UsersPostsUseCase constructor(

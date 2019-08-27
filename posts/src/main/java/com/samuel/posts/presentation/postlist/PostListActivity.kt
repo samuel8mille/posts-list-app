@@ -23,7 +23,7 @@ class PostListActivity : AppCompatActivity() {
     private val adapter = PostListAdapter(itemClick)
     private val snackBar by lazy {
         Snackbar.make(swipeRefreshLayout, getString(R.string.error), Snackbar.LENGTH_INDEFINITE)
-            .setAction(getString(R.string.retry)) { vm.get(refresh = true) }
+            .setAction(getString(R.string.retry)) { vm.get(refresh = false) }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -18,5 +18,4 @@ class CommentRepositoryImpl constructor(
             false -> cacheDataSource.get(postId)
                 .onErrorResumeNext { get(postId, true) }
         }
-
 }

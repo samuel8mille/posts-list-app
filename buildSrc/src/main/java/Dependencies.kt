@@ -15,7 +15,9 @@ object Modules {
     val common = ":common"
 
     val buildSrc = ":buildSrc"
+
     val posts = ":posts"
+    val login = ":login"
 }
 
 object Releases {

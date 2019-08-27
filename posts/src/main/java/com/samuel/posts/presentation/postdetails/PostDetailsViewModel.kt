@@ -1,6 +1,5 @@
 package com.samuel.posts.presentation.postdetails
 
-import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import br.com.samuel.presentation.Resource
