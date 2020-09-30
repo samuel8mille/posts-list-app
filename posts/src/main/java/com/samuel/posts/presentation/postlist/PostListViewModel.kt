@@ -1,6 +1,5 @@
 package com.samuel.posts.presentation.postlist
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import br.com.samuel.presentation.Resource
@@ -36,8 +35,6 @@ class PostListViewModel constructor(
         compositeDisposable.dispose()
         super.onCleared()
     }
-
-
 
 
 }

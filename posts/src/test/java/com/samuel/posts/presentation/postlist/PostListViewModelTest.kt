@@ -16,6 +16,9 @@ import io.mockk.verify
 import io.mockk.verifyOrder
 import io.reactivex.Single
 import io.reactivex.android.plugins.RxAndroidPlugins
+import io.reactivex.exceptions.UndeliverableException
+import io.reactivex.functions.Consumer
+import io.reactivex.plugins.RxJavaPlugins
 import io.reactivex.schedulers.Schedulers
 import org.junit.Before
 import org.junit.Rule
@@ -41,6 +44,7 @@ class PostListViewModelTest {
     @Before
     fun beforeTest() {
         RxAndroidPlugins.setInitMainThreadSchedulerHandler { Schedulers.trampoline() }
+        RxJavaPlugins.setErrorHandler {}
     }
 
     @Test
@@ -79,6 +83,7 @@ class PostListViewModelTest {
         viewModel.get()
 
         verify { repository.get(false) }
+
         verifyOrder {
             onPostsLoadedObserver.onChanged(resourceLoading)
             onPostsLoadedObserver.onChanged(resourceError)
