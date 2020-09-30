@@ -43,7 +43,7 @@ class PostListViewModelTest {
     }
 
     @Test
-    fun `when view model fetches data than it should call the repository success`() {
+    fun `when view model successful fetches data than it should call loading and success`() {
         val viewModel = instantiateViewModel()
 
         val resourceSuccess =
@@ -64,7 +64,7 @@ class PostListViewModelTest {
     }
 
     @Test
-    fun `when view model fetches data than it should call the repository error`() {
+    fun `when view model has error fetching data than it should call loading and error`() {
         val viewModel = instantiateViewModel()
 
         val resourceLoading = Resource(ResourceState.LOADING, null)
