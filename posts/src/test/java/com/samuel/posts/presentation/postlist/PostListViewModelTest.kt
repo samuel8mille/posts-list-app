@@ -26,7 +26,7 @@ class PostListViewModelTest {
     @get:Rule
     val rule = InstantTaskExecutorRule()
 
-    private val repository = mockk<UsersPostsUseCase>()
+    private val repository = mockk<UsersPostsUseCase>(relaxed = true)
 
     private val onPostsLoadedObserver = mockk<Observer<Resource<List<PostItem>>>>()
 
@@ -43,13 +43,17 @@ class PostListViewModelTest {
     }
 
     @Test
-    fun `when view model fetches data than it should call the repository`() {
+    fun `when view model fetches data than it should call the repository 2`() {
         val viewModel = instantiateViewModel()
 
         val resourceSuccess = Resource(ResourceState.SUCCESS, list.mapToPresentation())
         val resourceLoading = Resource(ResourceState.LOADING, null)
+//        val resourceError = Resource(ResourceState.ERROR, "Blah")
 
         every { repository.get(false) } returns Single.just(list)
+
+        every { onPostsLoadedObserver.onChanged(resourceLoading) } answers {
+        }
 
         viewModel.get()
 

@@ -1,5 +1,6 @@
 package com.samuel.posts.presentation.postlist
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import br.com.samuel.presentation.Resource
@@ -26,13 +27,19 @@ class PostListViewModel constructor(
             .map { it.mapToPresentation() }
             .subscribe(
                 { posts.setSuccess(it) },
-                { posts.setError(it.message) }
+                { posts.setError(it.message)
+                    Log.i("posts.setError", "get: " + it.message)
+                }
             )
+
         )
 
     override fun onCleared() {
         compositeDisposable.dispose()
         super.onCleared()
     }
+
+
+
 
 }
