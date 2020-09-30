@@ -13,6 +13,7 @@ import com.samuel.posts.presentation.model.mapToPresentation
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
+import io.mockk.verifyOrder
 import io.reactivex.Single
 import io.reactivex.android.plugins.RxAndroidPlugins
 import io.reactivex.schedulers.Schedulers
@@ -46,19 +47,6 @@ class PostListViewModelTest {
         val viewModel = instantiateViewModel()
 
         val resourceSuccess = Resource(ResourceState.SUCCESS, list.mapToPresentation())
-
-        every { repository.get(false) } returns Single.just(list)
-
-        viewModel.get()
-
-        verify { repository.get(false) }
-        verify { onPostsLoadedObserver.onChanged(resourceSuccess) }
-    }
-
-    @Test
-    fun `when view model fetches data than it should call the repository loading`() {
-        val viewModel = instantiateViewModel()
-
         val resourceLoading = Resource(ResourceState.LOADING, null)
 
         every { repository.get(false) } returns Single.just(list)
@@ -66,7 +54,10 @@ class PostListViewModelTest {
         viewModel.get()
 
         verify { repository.get(false) }
-        verify { onPostsLoadedObserver.onChanged(resourceLoading) }
+        verifyOrder {
+            onPostsLoadedObserver.onChanged(resourceLoading)
+            onPostsLoadedObserver.onChanged(resourceSuccess)
+        }
     }
 
     private fun instantiateViewModel(): PostListViewModel {
