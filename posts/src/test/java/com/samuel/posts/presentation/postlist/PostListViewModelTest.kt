@@ -29,13 +29,6 @@ class PostListViewModelTest {
 
     private val onPostsLoadedObserver = mockk<Observer<Resource<List<PostItem>>>>()
 
-    private val combinedUserPostList = listOf(
-        CombinedUserPost(
-            mockk(relaxed = true),
-            mockk(relaxed = true)
-        )
-    )
-
     @Before
     fun beforeTest() {
         RxAndroidPlugins.setInitMainThreadSchedulerHandler { Schedulers.trampoline() }
@@ -46,6 +39,12 @@ class PostListViewModelTest {
     fun `when view model successful fetches data than it should call loading and success`() {
         val viewModel = instantiateViewModel()
 
+        val combinedUserPostList = listOf(
+            CombinedUserPost(
+                mockk(relaxed = true),
+                mockk(relaxed = true)
+            )
+        )
         val resourceSuccess =
             Resource(ResourceState.SUCCESS, combinedUserPostList.mapToPresentation())
         val resourceLoading = Resource(ResourceState.LOADING, null)
