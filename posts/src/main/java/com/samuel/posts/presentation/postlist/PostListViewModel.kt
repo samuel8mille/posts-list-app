@@ -24,7 +24,10 @@ class PostListViewModel constructor(
             .doOnSubscribe { posts.setLoading() }
             .subscribeOn(Schedulers.io())
             .map { it.mapToPresentation() }
-            .subscribe({ posts.setSuccess(it) }, { posts.setError(it.message) })
+            .subscribe(
+                { posts.setSuccess(it) },
+                { posts.setError(it.message) }
+            )
         )
 
     override fun onCleared() {

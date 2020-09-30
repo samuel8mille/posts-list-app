@@ -49,7 +49,7 @@ object Versions {
 
     val kotlin = "1.3.41"
     val timber = "4.7.1"
-    val rxjava = "2.2.10"
+    val rxjava = "2.1.1"
     val rxkotlin = "2.3.0"
     val retrofit = "2.6.0"
     val loggingInterceptor = "4.0.0"
@@ -57,7 +57,6 @@ object Versions {
     val rxpaper = "1.4.0"
     val paperdb = "2.6"
     val moshi = "1.8.0"
-    val lifecycle = "2.0.0"
     val leakCanary = "2.0-alpha-2"
     val crashlytics = "2.10.1"
     val koin = "2.0.0-beta-1"
@@ -70,6 +69,9 @@ object Versions {
     val mockitoInline = "3.0.0"
     val constraintLayout = "1.1.3"
     val room = "2.1.0"
+
+    val mockk = "1.9.3"
+    val lifeCycle = "2.1.0"
 }
 
 object Libraries {
@@ -83,6 +85,7 @@ object Libraries {
 
     val rxjava = "io.reactivex.rxjava2:rxjava:${Versions.rxjava}"
     val rxkotlin = "io.reactivex.rxjava2:rxkotlin:${Versions.rxkotlin}"
+    val rxAndroid = "io.reactivex.rxjava2:rxandroid:${Versions.rxjava}"
 
     val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     val rxjavaAdapter = "com.squareup.retrofit2:adapter-rxjava2:${Versions.retrofit}"
@@ -97,8 +100,8 @@ object Libraries {
     val rxpaper = "com.github.pakoito:RxPaper2:${Versions.rxpaper}"
     val moshi = "com.squareup.moshi:moshi:${Versions.moshi}"
 
-    val lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
-    val lifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${Versions.lifecycle}"
+    val lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifeCycle}"
+    val lifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${Versions.lifeCycle}"
 
     val leakCanaryAndroid = "com.squareup.leakcanary:leakcanary-android:${Versions.leakCanary}"
 
@@ -132,5 +135,6 @@ object TestLibraries {
     val assertjCore = "org.assertj:assertj-core:${Versions.assertjCore}"
     val mockitoKotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:${Versions.mockitoKotlin}"
     val mockitoInline = "org.mockito:mockito-inline:${Versions.mockitoInline}"
-    val lifecycleTesting = "androidx.arch.core:core-testing:${Versions.lifecycle}"
+    val lifecycleTesting = "androidx.arch.core:core-testing:${Versions.lifeCycle}"
+    val mockk = "io.mockk:mockk:${Versions.mockk}"
 }
