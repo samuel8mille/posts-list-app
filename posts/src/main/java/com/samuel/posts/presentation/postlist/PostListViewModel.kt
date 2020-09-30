@@ -27,9 +27,7 @@ class PostListViewModel constructor(
             .map { it.mapToPresentation() }
             .subscribe(
                 { posts.setSuccess(it) },
-                { posts.setError(it.message)
-                    Log.i("posts.setError", "get: " + it.message)
-                }
+                { posts.setError(it.message) }
             )
 
         )
