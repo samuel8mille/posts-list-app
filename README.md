@@ -9,6 +9,7 @@ Using Stack:
 - AndroidX
 - Mockk
 - Retrofit2.0
+- Modularization
 - RxJava
 - MVVM
 - LiveData
