@@ -1,3 +1,21 @@
 # PostsListApp
 
-An application that list posts from "JSONPlaceholder API". Coded under MVVM architecture using kotlin wich implements Dagger 2, Android Architecture Components, Retrofit, RxAndroid and Room.
+An application that list posts from "JSONPlaceholder API".
+
+Using Stack:
+
+- Kotlin
+- Android DataBinding
+- AndroidX
+- Mockk
+- Retrofit2.0
+- RxJava
+- MVVM
+- LiveData
+- Glide
+- Android ViewModel
+- Android JetPack
+- Android Arch Lifecycle
+
+
+![alt text](https://github.com/samuel8mille/GokApp/blob/master/app/screenshot.jpg)

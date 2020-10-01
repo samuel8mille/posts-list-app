@@ -38,7 +38,6 @@ class PostListViewModelTest {
     @Test
     fun `when view model successful fetches data than it should call loading and success`() {
         val viewModel = instantiateViewModel()
-
         val combinedUserPostList = listOf(
             CombinedUserPost(
                 mockk(relaxed = true),
@@ -46,14 +45,14 @@ class PostListViewModelTest {
             )
         )
         val resourceLoading = Resource(ResourceState.LOADING, null)
-        val resourceSuccess =
-            Resource(ResourceState.SUCCESS, combinedUserPostList.mapToPresentation())
+        val resourceSuccess = Resource(ResourceState.SUCCESS, combinedUserPostList.mapToPresentation())
 
         every { repository.get(false) } returns Single.just(combinedUserPostList)
 
         viewModel.get()
 
         verify { repository.get(false) }
+
         verifyOrder {
             onPostsLoadedObserver.onChanged(resourceLoading)
             onPostsLoadedObserver.onChanged(resourceSuccess)
@@ -63,7 +62,6 @@ class PostListViewModelTest {
     @Test
     fun `when view model has error fetching data than it should call loading and error`() {
         val viewModel = instantiateViewModel()
-
         val resourceLoading = Resource(ResourceState.LOADING, null)
         val resourceError = Resource(ResourceState.ERROR, null)
 
