@@ -27,7 +27,7 @@ class PostListViewModelTest {
 
     private val repository = mockk<UsersPostsUseCase>(relaxed = true)
 
-    private val onPostsLoadedObserver = mockk<Observer<Resource<List<PostItem>>>>()
+    private val onPostsLoadedObserver = mockk<Observer<Resource<List<PostItem>>>>(relaxed = true)
 
     @Before
     fun beforeTest() {
@@ -45,13 +45,11 @@ class PostListViewModelTest {
                 mockk(relaxed = true)
             )
         )
+        val resourceLoading = Resource(ResourceState.LOADING, null)
         val resourceSuccess =
             Resource(ResourceState.SUCCESS, combinedUserPostList.mapToPresentation())
-        val resourceLoading = Resource(ResourceState.LOADING, null)
 
         every { repository.get(false) } returns Single.just(combinedUserPostList)
-
-        every { onPostsLoadedObserver.onChanged(resourceLoading) } answers {}
 
         viewModel.get()
 
@@ -70,8 +68,6 @@ class PostListViewModelTest {
         val resourceError = Resource(ResourceState.ERROR, null)
 
         every { repository.get(false) } returns Single.error(Exception())
-
-        every { onPostsLoadedObserver.onChanged(resourceLoading) } answers {}
 
         viewModel.get()
 
