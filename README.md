@@ -17,6 +17,7 @@ Using Stack:
 - Android ViewModel
 - Android JetPack
 - Android Arch Lifecycle
+- Clean architecture
 
 
 ![alt text](https://github.com/samuel8mille/posts-list-app/blob/master/app/screenshot.jpg)
