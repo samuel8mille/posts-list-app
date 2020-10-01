@@ -18,4 +18,4 @@ Using Stack:
 - Android Arch Lifecycle
 
 
-![alt text](https://github.com/samuel8mille/GokApp/blob/master/app/screenshot.jpg)
+![alt text](https://github.com/samuel8mille/posts-list-app/blob/master/app/screenshot.jpg)
